@@ -163,7 +163,7 @@ body {
     right: 18%;
     width: 280px;
     height: 1px;
-    background-image: url("/img/article_line.png");
+    background-image: url("https://isinshino.github.io/le-corte/img/article_line.png");
     background-repeat: no-repeat;
 }
 
@@ -466,7 +466,7 @@ body {
     right: 38%;
     width: 118px;
     height: 1px;
-    background-image: url("/img/deg-title-after.png");
+    background-image: url("https://isinshino.github.io/le-corte/img/deg-title-after.png");
     background-repeat: no-repeat;
 }
 
