@@ -189,31 +189,6 @@ body {
     position: relative;
 }
 
-
-/* .slider-left-part:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    width: 54px;
-    height: 54px;
-    background-image: url("/img/arrow.png");
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-    opacity: 0.3;
-}
-
-.slider-right-part:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    width: 54px;
-    height: 54px;
-    background-image: url("/img/arrow.png");
-    background-repeat: no-repeat;
-} */
-
 .slider-left-part {
     padding-top: 100px;
     float: left;
@@ -234,9 +209,6 @@ body {
     padding-top: 760px;
     margin-left: 525px;
 }
-
-
-/***************************************************/
 
 .slider-section .prev {
     left: 0;
@@ -304,9 +276,6 @@ body {
         opacity: 1
     }
 }
-
-
-/***************************************************/
 
 .new-collections-section {
     background-color: #E8E4C4;
@@ -501,11 +470,21 @@ body {
     outline: none;
 }
 
+::placeholder {
+    color: white;
+}
 
-/* 
-.degustation-form input[type="text"]:focus {
-    border-color: red;
-} */
+.degustation-form input[type="text"]:hover::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.degustation-form input[type="text"]:hover:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.degustation-form input[type="text"]:hover::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
 
 .deg-form-left-part {
     float: left;
