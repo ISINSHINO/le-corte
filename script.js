@@ -33,3 +33,17 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";
 }
+
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    var nameInput = document.getElementById("fullname");
+    var phoneInput = document.getElementById("phone");
+    var adressSelect = document.getElementById("adress");
+    nameInput.value = "Имя";
+    phoneInput.value = "Телефон";
+    adressSelect.value = 0;
+    setTimeout(() => { popup.classList.toggle("show") }, 5000);
+
+
+}

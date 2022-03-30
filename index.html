@@ -19,7 +19,7 @@
                 <li><a href="#">Каталог</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Коллекции</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <div class="promo">
                 <h2 class="promo-title">Лучший вкус, это вкус долголетнего вина</h2>
@@ -116,20 +116,20 @@
 
     <div class="degustation-section">
         <div class="container-big">
-            <div class="deg-block">
+            <div class="deg-block" name="#degustation">
                 <img class="grapes-img" src="img/grapes.png">
                 <h2 class="degustation-title">Запись на дегустацию</h2>
                 <img class="barrel-img" src="img/barrel.png">
                 <p class="degustation-aricle">Приглашаем вас провести вечер в компании<br> профессионального сомелье, который познакомит вас<br> с лучшими винами из нашего ассортимента.</p>
                 <form class="degustation-form" action="lecorte-mail" method="post">
                     <div class="deg-form-left-part">
-                        <input type="text" name="fullname" value="Имя">
+                        <input onfocus="this.value=''" type="text" id="fullname" value="Имя">
                     </div>
                     <div class="deg-form-right-part">
-                        <input type="text" name="phone" value="Телефон">
+                        <input onfocus="this.value=''" type="text" id="phone" value="Телефон">
                     </div>
                     <div class="deg-form">
-                        <select name="adress">
+                        <select id="adress">
                     <option value="0" disabled selected>Выберите адрес бутика</option>
                     <option value="1">15 переулок, 59</option>
                     <option value="2">18 переулок, 88</option>
@@ -137,7 +137,8 @@
                 </select>
                     </div>
                     <div class="deg-submit">
-                        <input class="btn" type="submit" value="Записаться">
+                        <a href="#degustation" onclick="myFunction()" class="btn">Записаться</a>
+                        <span class="popuptext" id="myPopup">Вы успешно записались!</span>
                     </div>
                 </form>
             </div>
@@ -166,7 +167,7 @@
                     <a href="#">Коллекция 2022</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="contacts.html">Контакты</a>
                 </li>
             </ul>
             <ul class="footer-social">

@@ -496,6 +496,11 @@ body {
     font-weight: normal;
 }
 
+.degustation-form input[type="text"]:focus,
+.degustation-form select {
+    outline: none;
+}
+
 
 /* 
 .degustation-form input[type="text"]:focus {
@@ -536,12 +541,76 @@ body {
 }
 
 .deg-submit {
+    position: relative;
     padding-left: 310px;
     margin-top: 0px;
     padding-top: 60px;
 }
 
-.degustation-section input[type="submit"] {
+
+/* The actual popup */
+
+.deg-submit .popuptext {
+    visibility: hidden;
+    width: 260px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 60%;
+    left: 50%;
+    margin-left: -135px;
+}
+
+
+/* Popup arrow */
+
+.deg-submit .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.deg-submit .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* .degustation-section input[type="submit"] {
     width: 540px;
     background-color: #282828;
     text-transform: uppercase;
@@ -561,6 +630,32 @@ body {
 }
 
 .degustation-section input[type="submit"]:active {
+    color: rgba(0, 0, 0, 0.3)
+} */
+
+.deg-submit .btn {
+    text-decoration: none;
+    min-width: 540px;
+    background-color: #282828;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Montserrat", serif;
+    border: none;
+    border: 1px solid white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding-left: 204px;
+    padding-right: 204px;
+}
+
+.deg-submit .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.deg-submit .btn:active {
     color: rgba(0, 0, 0, 0.3)
 }
 
