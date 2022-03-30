@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 1130px;
     margin: 0;
@@ -57,7 +61,7 @@ body {
 }
 
 .header-nav {
-    width: 1110px;
+    width: 1120px;
     padding-left: 0;
     list-style: none;
     font-size: 13px;
@@ -645,7 +649,7 @@ body {
     right: 25%;
     width: 60px;
     height: 25px;
-    background-image: url("/img/select-arrow.png");
+    background-image: url("img/select-arrow.png");
     background-repeat: no-repeat;
     background-color: #282828;
 }
@@ -731,7 +735,8 @@ body {
 }
 
 .footer-social li:nth-child(3) {
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 5px;
     border-right: 1px solid white;
 }
 
@@ -747,15 +752,51 @@ body {
     padding-right: 52px;
 }
 
-.soc-yt-icon {
-    padding-right: 30px;
-    padding-left: 20px;
+.social i {
+    font-size: 25px;
 }
 
-.soc-vk-icon {
-    padding-right: 30px;
+.socials a i {
+    transition: all 0.3s linear;
 }
 
-.soc-fb-icon {
-    padding-right: 30px;
+.socials a i {
+    transform: scale(0.7);
+}
+
+.socials a:hover i {
+    transform: scale(0.9);
+}
+
+.youtube:hover {
+    color: red;
+}
+
+.vk:hover {
+    color: #0077FF;
+}
+
+.facebook:hover {
+    color: blue;
+}
+
+.fa-youtube {
+    width: 26px;
+    height: 26px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.fa-vk {
+    width: 24px;
+    height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fa-facebook-f {
+    width: 26px;
+    height: 26px;
+    padding-left: 15px;
+    padding-right: 20px;
 }
