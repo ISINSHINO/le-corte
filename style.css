@@ -13,6 +13,93 @@ body {
     background-color: #282828;
 }
 
+.age-container.blur {
+    filter: blur(15px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.age-confirm {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    width: 910px;
+    max-height: 380px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.age-confirm.active {
+    top: 30%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.age-confirm p {
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.age-title {
+    font-family: 'Montserrat', serif;
+    font-size: 32px;
+    color: #998431;
+    line-height: 39px;
+    font-weight: 400;
+    background-color: #F2F1E1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.age-article.first {
+    padding-top: 30px;
+}
+
+.age-article.last {
+    margin-bottom: 35px;
+}
+
+.age-article {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+    padding-left: 60px;
+}
+
+.age-confirm-bottom {
+    background-color: #fff;
+    height: 255px;
+}
+
+.age-btn {
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    border: none;
+    margin-left: 60px;
+    padding: 15px 45px;
+    color: white;
+    background-color: #998431;
+    border-radius: 5px;
+}
+
+.age-btn:hover {
+    background-color: #6D5E14;
+}
+
+.age-btn:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .container {
     width: 1110px;
     margin: 0 auto;
@@ -53,6 +140,8 @@ body {
     float: right;
     font-size: 13px;
     font-weight: 300;
+    text-decoration: none;
+    color: white;
 }
 
 .header-top {
@@ -74,8 +163,9 @@ body {
     color: white;
 }
 
-.header-nav a:hover {
+.header-nav li:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .header-nav a:active {
@@ -86,10 +176,11 @@ body {
     float: left;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
-    padding-left: 106px;
-    padding-right: 108px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 7px;
     padding-bottom: 7px;
+    text-align: center;
 }
 
 .header-nav li:nth-child(2),
@@ -98,8 +189,21 @@ body {
     border-right: 1px solid white;
 }
 
+.header-nav li:nth-child(1) {
+    width: 266px;
+}
+
 .header-nav li:nth-child(2) {
     border-right: none;
+    width: 275px;
+}
+
+.header-nav li:nth-child(3) {
+    width: 289px;
+}
+
+.header-nav li:nth-child(4) {
+    width: 276px;
 }
 
 .promo-title {
@@ -448,15 +552,17 @@ body {
     padding-top: 60px;
 }
 
-.degustation-aricle {
+.degustation-article {
     margin-bottom: 48px;
-    font-weight: 300;
+    margin-left: 280px;
     text-align: center;
+    font-weight: 300;
     line-height: 26px;
     padding-top: 141px;
 }
 
-.degustation-form input[type="text"] {
+.degustation-form input[type="text"],
+.degustation-form input[type="tel"] {
     width: 250px;
     padding-top: 5px;
     padding-bottom: 10px;
@@ -470,23 +576,17 @@ body {
 }
 
 .degustation-form input[type="text"]:focus,
+.degustation-form input[type="tel"]:focus,
 .degustation-form select {
     outline: none;
 }
 
-::placeholder {
+ ::placeholder {
     color: white;
 }
 
-.degustation-form input[type="text"]:hover::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.degustation-form input[type="text"]:hover:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.degustation-form input[type="text"]:hover::-ms-input-placeholder {
+.degustation-form input[type="text"]:hover::placeholder,
+.degustation-form input[type="tel"]:hover::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -717,39 +817,49 @@ body {
 
 .footer-social li:nth-child(1) {
     padding-left: 86px;
-    padding-top: 10px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     padding-right: 63px;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .footer-social li:nth-child(2) {
-    padding-bottom: 13px;
-    padding-top: 12px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     border-left: 1px solid white;
     border-right: 1px solid white;
     font-size: 14px;
     padding-left: 55px;
     padding-right: 55px;
+    font-weight: 600;
 }
 
 .footer-social li:nth-child(3) {
-    padding-top: 12px;
-    padding-bottom: 5px;
+    padding-top: 18px;
+    padding-bottom: 8px;
     border-right: 1px solid white;
 }
 
 .footer-social li:nth-child(4) {
-    padding-bottom: 13px;
-    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 36px;
+    padding-top: 18px;
+    padding-bottom: 16px;
     font-size: 14px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .footer-social li:nth-child(4) p {
-    padding-left: 61px;
+    padding-left: 57px;
     padding-right: 52px;
+}
+
+.footer-phone {
+    text-decoration: none;
+    color: white;
 }
 
 .social i {
@@ -770,33 +880,36 @@ body {
 
 .youtube:hover {
     color: red;
+    cursor: pointer;
 }
 
 .vk:hover {
     color: #0077FF;
+    cursor: pointer;
 }
 
 .facebook:hover {
     color: blue;
+    cursor: pointer;
 }
 
 .fa-youtube {
     width: 26px;
     height: 26px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 
 .fa-vk {
     width: 24px;
     height: 24px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 
 .fa-facebook-f {
     width: 26px;
     height: 26px;
-    padding-left: 15px;
+    padding-left: 17px;
     padding-right: 20px;
 }

@@ -36,14 +36,16 @@ function showSlides(n) {
 
 function myFunction() {
     var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-    var nameInput = document.getElementById("fullname");
-    var phoneInput = document.getElementById("phone");
-    var adressSelect = document.getElementById("adress");
-    nameInput.value = "Имя";
-    phoneInput.value = "Телефон";
-    adressSelect.value = 0;
+    popup.classList.toggle("show");;
+    setTimeout(() => { document.getElementById('degustaion-form').reset() }, 500);
     setTimeout(() => { popup.classList.toggle("show") }, 5000);
+    return false;
+}
 
 
+function confirmingAge() {
+    var popupAge = document.querySelector(".age-confirm");
+    popupAge.classList.toggle("active");
+    var blur = document.querySelector(".age-container");
+    blur.classList.toggle("blur");
 }
