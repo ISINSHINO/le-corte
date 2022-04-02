@@ -393,14 +393,17 @@ body {
 
 .youtube:hover {
     color: red;
+    cursor: pointer;
 }
 
 .vk:hover {
     color: #0077FF;
+    cursor: pointer;
 }
 
 .facebook:hover {
     color: blue;
+    cursor: pointer;
 }
 
 .fa-youtube {
