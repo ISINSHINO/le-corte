@@ -80,7 +80,7 @@ body {
 }
 
 .age-btn {
-    transition: 0.5s;
+    transition: 0.7s;
     cursor: pointer;
     font-size: 16px;
     font-family: 'Montserrat';
@@ -222,6 +222,8 @@ body {
 }
 
 .header-section .btn {
+    transition: 0.7s;
+    border-radius: 5px;
     min-width: 230px;
     text-decoration: none;
     color: white;
@@ -391,6 +393,11 @@ body {
     color: black;
     font-weight: 300;
     /* font-weight: 400; */
+}
+
+.new-collections-section .btn {
+    border-radius: 5px;
+    transition: 0.7s;
 }
 
 .new-collections-section .btn:hover {
@@ -731,6 +738,7 @@ body {
     letter-spacing: 1.5px;
     padding-left: 204px;
     padding-right: 204px;
+    transition: 0.7s;
 }
 
 .deg-submit .btn:hover {

@@ -28,11 +28,8 @@ body {
 
 .header-section {
     background-color: #E6E3C4;
-    background-image: url(img/leaves_decor.png);
-    background-position-y: 40%;
-    background-repeat: repeat-x;
     padding-top: 15px;
-    height: 410px;
+    height: 140px;
 }
 
 .header-adress {
@@ -117,90 +114,110 @@ body {
     width: 276px;
 }
 
-.promo-title {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 40px;
-    margin-top: 140px;
-    margin-left: 230px;
+
+/* ----------------------------------------------------------------------*/
+
+.item-section {
+    height: 900px;
+    background-color: white;
 }
 
-.promo-article {
-    text-align: center;
-    font-weight: 600;
-    margin-top: 35px;
-}
-
-.catalog-section {
-    height: 1880px;
-    background-image: url(img/bottle-divider.png);
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-}
-
-.bottle-item {
+.item-img {
     float: left;
-    width: 347px;
-    height: 775px;
-    margin-left: 15px;
-    margin-top: 80px;
+    width: 470px;
 }
 
-.bottle-year {
+.item-img img {
+    padding-top: 60px;
+    padding-left: 145px;
+}
+
+.item-description {
+    float: right;
+    width: 555px;
+}
+
+.item-year {
     color: #998431;
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.1em;
-    text-align: center;
-    margin-top: 30px;
+    text-align: left;
+    padding-top: 60px;
     margin-bottom: 0px;
+    margin-left: 1px;
 }
 
-.bottle-title {
-    text-align: center;
+.item-title {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 42px;
     line-height: 150%;
-    color: black;
+    /* or 63px */
+    color: #000000;
+    text-align: left;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
 }
 
-.bottle-type {
+.item-collection {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
     color: #998431;
+}
+
+.item-about {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 150%;
-    /* or 21px */
-    text-align: center;
-    letter-spacing: 0.1em;
-    margin-top: 35px;
-    margin-bottom: 0px;
+    /* or 24px */
+    color: #282828;
+    margin-bottom: 10px;
 }
 
-.info {
-    margin-bottom: 5px;
+.item-price {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    color: rgba(40, 40, 40, 0.7);
+    margin-top: 10px;
+}
+
+.item-price .price {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 150%;
+    /* or 60px */
+    color: rgba(40, 40, 40, 0.7);
+}
+
+.price-value {
+    font-style: normal;
 }
 
 .about-left-part {
     width: 90px;
     float: left;
-    margin-left: 75px;
-    margin-bottom: 11px;
 }
 
 .about-right-part {
     width: 90px;
     float: right;
-    margin-bottom: 20px;
-    margin-right: 40px;
+    margin-right: 326px;
+    margin-bottom: 0px;
 }
 
 .bottle-color,
@@ -248,11 +265,12 @@ body {
 
 .color-right {
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .alc-right {
     margin-bottom: 20px;
-    margin-top: 0px;
+    margin-top: 20px;
 }
 
 .value-right {
@@ -260,7 +278,7 @@ body {
 }
 
 .to-cart-btn {
-    padding: 15px 20px;
+    padding: 12px 20px;
     background: #998431;
     border-radius: 5px;
     font-family: 'Montserrat';
@@ -272,7 +290,6 @@ body {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-top: 0px;
-    margin-left: 100px;
     text-decoration: none;
     transition: 0.7s;
 }
@@ -285,40 +302,12 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.bottle-item img {
-    transition: transform 0.7s;
+.info {
+    margin-top: 15px;
 }
 
-.bottle-item img:hover {
-    transform: scale(1.2);
-}
 
-.bottle-item:nth-child(2) img {
-    padding-left: 13px;
-}
-
-.bottle-item:nth-child(3) img {
-    padding-left: 11px;
-}
-
-.bottle-item:nth-child(4) img {
-    padding-left: 21px;
-}
-
-.bottle-item:nth-child(5) img {
-    padding-left: 11px;
-}
-
-.bottle-item:nth-child(6) img {
-    padding-left: 118px;
-}
-
-.bottle-item:nth-child(4),
-.bottle-item:nth-child(5),
-.bottle-item:nth-child(6) {
-    margin-top: 150px;
-    margin-bottom: 80px;
-}
+/*------------------------------------------------------------------------*/
 
 .footer-section {
     background-color: #E6E3C4;
@@ -409,7 +398,7 @@ body {
 
 .footer-social li:nth-child(3) {
     padding-top: 18px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     border-right: 1px solid #282828;
 }
 
