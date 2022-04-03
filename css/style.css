@@ -118,7 +118,7 @@ body {
 
 .header-section {
     background-color: black;
-    background-image: url(/img/header-bg.png);
+    background-image: url(../img/header-bg.png);
     background-repeat: no-repeat;
     background-position-y: 100%;
     background-position-x: 50%;
@@ -499,7 +499,7 @@ body {
 
 .degustation-section {
     min-height: 720px;
-    background-image: url(/img/border.png);
+    background-image: url(../img/border.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;

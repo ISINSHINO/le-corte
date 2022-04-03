@@ -28,7 +28,7 @@ body {
 
 .header-section {
     background-color: #E6E3C4;
-    background-image: url(/img/leaves_decor.png);
+    background-image: url(../img/leaves_decor.png);
     background-position-y: 40%;
     background-repeat: repeat-x;
     padding-top: 15px;
@@ -135,7 +135,7 @@ body {
 
 .catalog-section {
     height: 1880px;
-    background-image: url(/img/bottle-divider.png);
+    background-image: url(../img/bottle-divider.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
 }
@@ -228,7 +228,7 @@ body {
     left: 94%;
     width: 30px;
     height: 1px;
-    background-image: url("img/info-line.png");
+    background-image: url("..img/info-line.png");
     background-repeat: no-repeat;
 }
 

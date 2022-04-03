@@ -27,7 +27,7 @@ body {
 
 .header-section {
     background-color: black;
-    background-image: url(/img/contacts-bg.png);
+    background-image: url(../img/contacts-bg.png);
     background-repeat: no-repeat;
     padding-top: 15px;
     min-height: 555px;
@@ -226,7 +226,7 @@ body {
 .write-us-whatsapp:before {
     content: "";
     position: absolute;
-    background-image: url(/img/contacts-wht-icon.png);
+    background-image: url(../img/contacts-wht-icon.png);
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
@@ -237,7 +237,7 @@ body {
 .write-us-telegram:before {
     content: "";
     position: absolute;
-    background-image: url(/img/contact-tg-icon.png);
+    background-image: url(../img/contact-tg-icon.png);
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
@@ -248,7 +248,7 @@ body {
 .write-us-facebook:before {
     content: "";
     position: absolute;
-    background-image: url(/img/contacts-fb-icon.png);
+    background-image: url(../img/contacts-fb-icon.png);
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
