@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:300,400, 500,600,700&amp;lang=en" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Le-corte</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous">
     </script>
     <link rel="icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                             </cite>
                                 </blockquote>
                             </div>
-                            <p class="counter ">1&nbsp;/&nbsp;4</p>
+
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                                 </blockquote>
 
                             </div>
-                            <p class="counter ">2&nbsp;/&nbsp;4</p>
+
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                             </cite>
                                 </blockquote>
                             </div>
-                            <p class="counter ">3&nbsp;/&nbsp;4</p>
+
                         </div>
                     </div>
                 </div>
@@ -115,17 +115,16 @@
                                 </blockquote>
 
                             </div>
-                            <p class="counter ">4&nbsp;/&nbsp;4</p>
+
                         </div>
                     </div>
                 </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
 
-        <!-- <a class="prev " onclick="minusSlide() "> <img src="img/arrow.png "></a>
-        <a class="next " onclick="plusSlide() "><img src="img/arrow.png "></a> -->
 
         <div class="new-collections-section " name="#collections ">
             <div class="container ">
@@ -267,13 +266,17 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         });
     </script>
-    <script src=" script.js "></script>
+    <script src="js/script.js "></script>
 </body>
 
 </html>
