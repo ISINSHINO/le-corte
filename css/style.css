@@ -753,7 +753,7 @@ body {
 .footer-nav {
     padding-top: 50px;
     list-style: none;
-    width: 1111px;
+    width: 100%;
     padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -794,6 +794,7 @@ body {
     padding-left: 0px;
     margin-bottom: 0px;
     margin-top: 12px;
+    width: 100%;
 }
 
 .footer-social li {

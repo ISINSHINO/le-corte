@@ -29,6 +29,7 @@ body {
     background-color: black;
     background-image: url(../img/contacts-bg.png);
     background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 15px;
     min-height: 555px;
 }
@@ -57,7 +58,7 @@ body {
 }
 
 .header-nav {
-    width: 1110px;
+    width: 100%;
     padding-left: 0;
     list-style: none;
     font-size: 13px;
@@ -275,7 +276,7 @@ body {
     margin-top: 0px;
     padding-top: 50px;
     list-style: none;
-    width: 1111px;
+    width: 100%;
     padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -367,7 +368,7 @@ body {
 
 .footer-social li:nth-child(4) p {
     padding-left: 57px;
-    padding-right: 52px;
+    padding-right: 61px;
 }
 
 .footer-phone {

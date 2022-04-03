@@ -61,7 +61,7 @@ body {
 }
 
 .header-nav {
-    width: 1110px;
+    width: 100%;
     padding-left: 0;
     list-style: none;
     font-size: 14px;
@@ -228,7 +228,7 @@ body {
     left: 94%;
     width: 30px;
     height: 1px;
-    background-image: url("..img/info-line.png");
+    background-image: url("../img/info-line.png");
     background-repeat: no-repeat;
 }
 
@@ -328,7 +328,7 @@ body {
 .footer-nav {
     padding-top: 50px;
     list-style: none;
-    width: 1111px;
+    width: 100%;
     padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -351,7 +351,7 @@ body {
 }
 
 .footer-nav li:last-child {
-    padding-right: 83px;
+    padding-right: 82px;
 }
 
 .footer-nav a {
@@ -425,7 +425,7 @@ body {
 
 .footer-social li:nth-child(4) p {
     padding-left: 57px;
-    padding-right: 52px;
+    padding-right: 56px;
 }
 
 .footer-phone {
