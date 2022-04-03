@@ -244,8 +244,38 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
+.swiper {
+    width: 100%;
+    height: 860px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #282828;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .item-title {
-    margin-bottom: 0px;
     font-family: "Playfair Display", serif;
     font-size: 36px;
     max-width: 450px;
@@ -253,7 +283,7 @@ body {
     font-weight: 600;
     text-align: center;
     padding-left: 105px;
-    margin-bottom: 15px;
+    margin-bottom: 65px;
 }
 
 .item-article {
@@ -269,7 +299,7 @@ body {
 .item-article:after {
     content: "";
     position: absolute;
-    top: 46%;
+    top: 48%;
     right: 18%;
     width: 280px;
     height: 1px;
@@ -285,13 +315,16 @@ body {
     margin-bottom: 25px;
 }
 
-.item-article cite {
+.item-article:nth-child(1) cite,
+.item-article:nth-child(3) cite {
     font-style: normal;
     padding-left: 428px;
 }
 
-.item:nth-child(2) cite {
-    padding-left: 411px;
+.item-article:nth-child(2) cite,
+.item-article:nth-child(4) cite {
+    font-style: normal;
+    padding-left: 412px;
 }
 
 .slider-section {
@@ -317,16 +350,11 @@ body {
     color: #E8E4C4;
     font-weight: bold;
     padding-top: 760px;
-    margin-left: 525px;
+    margin-left: 15px;
 }
 
-.slider-section .prev {
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.slider-section .prev,
-.slider-section .next {
+.swiper-button-next,
+.swiper-button-prev {
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -338,53 +366,8 @@ body {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-.slider-section .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev img .disabled,
-.next img .disabled {
-    opacity: 0.3;
-}
-
-
-/* При наведении на кнопки добавляем фон кнопок */
-
-.slider-section .prev:hover,
-.slider-section .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Анимация слайдов */
-
-.slider-section .item {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    border-radius: 0 2px 2px 0;
+    color: black;
 }
 
 .new-collections-section {
