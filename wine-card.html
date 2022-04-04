@@ -22,7 +22,9 @@
             </div>
             <ul class="header-nav clearfix ">
                 <li><a href="collection.html">Каталог</a></li>
-                <li><a href="# ">Доставка</a></li>
+                <li class="cart-li"><a href="# ">Корзина</a>
+                    <input type="text" id="basket-items" value="0">
+                </li>
                 <li><a href="collection.html ">Коллекции</a></li>
                 <li><a href="contacts.html ">Контакты</a></li>
             </ul>
@@ -41,7 +43,7 @@
                 <p class="item-about"> Сдержанность вкуса и аромата, цвет этого вина удовлетворит <br> ожидания любого ценителя белого вина. Ужин с рыбными <br>блюдами идеально дополнит Cabernet Sauvignon. Благородное<br> сухое белое вино из южного региона Марселя.</p>
                 <p class="item-price"><span class="price">1335</span>
                     <span class="price-value">руб.</span> - средняя розничная цена</p>
-                <a href="#" class="to-cart-btn">В корзину</a>
+                <button onclick="incrementValue()" class="to-cart-btn">В корзину</button>
                 <div class="info clearfix">
                     <div class="about-left-part">
                         <p class="bottle-color">Цвет</p>
@@ -163,6 +165,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/script-carousel.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

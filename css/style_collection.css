@@ -105,12 +105,32 @@ body {
 }
 
 .header-nav li:nth-child(2) {
+    width: 289px;
     border-right: none;
-    width: 275px;
+    position: relative;
+}
+
+li:nth-child(3) input[type="text"] {
+    padding-left: 4px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat';
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+    color: white;
+    background-image: url(../img/cart-back.png);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 2px;
+    background-size: 15px 15px;
 }
 
 .header-nav li:nth-child(3) {
-    width: 289px;
+    width: 275px;
 }
 
 .header-nav li:nth-child(4) {
@@ -169,6 +189,10 @@ body {
     color: black;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.title-link {
+    text-decoration: none;
 }
 
 .bottle-type {
@@ -274,7 +298,8 @@ body {
     margin-top: 0px;
     margin-left: 100px;
     text-decoration: none;
-    transition: 0.7s;
+    transition: 0.3s;
+    border: none;
 }
 
 .to-cart-btn:hover {
@@ -283,6 +308,7 @@ body {
 
 .to-cart-btn:active {
     color: rgba(255, 255, 255, 0.3);
+    transform: scale(0.8);
 }
 
 .bottle-item img {
@@ -310,7 +336,7 @@ body {
 }
 
 .bottle-item:nth-child(6) img {
-    padding-left: 118px;
+    padding-left: 54px;
 }
 
 .bottle-item:nth-child(4),

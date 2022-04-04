@@ -195,11 +195,11 @@ body {
 
 .header-nav li:nth-child(2) {
     border-right: none;
-    width: 275px;
+    width: 289px;
 }
 
 .header-nav li:nth-child(3) {
-    width: 289px;
+    width: 275px;
 }
 
 .header-nav li:nth-child(4) {
