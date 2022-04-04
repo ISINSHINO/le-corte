@@ -104,11 +104,13 @@ body {
 
 .header-nav li:nth-child(2) {
     border-right: none;
-    width: 275px;
-    position: relative;
+    width: 289px;
 }
 
-li:nth-child(2) input[type="text"] {
+li:nth-child(3) input[type="text"] {
+    padding-left: 3.5px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat';
     display: none;
     position: absolute;
     background-color: transparent;
@@ -116,23 +118,18 @@ li:nth-child(2) input[type="text"] {
     user-select: none;
     pointer-events: none;
     z-index: 999;
-    color: black;
-}
-
-.cart-li:after {
-    visibility: hidden;
-    position: absolute;
-    bottom: 20px;
-    right: 34%;
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-color: red;
-    border-radius: 1000px;
+    color: white;
+    background-image: url(../img/cart-back.png);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 2px;
+    background-size: 15px 15px;
+    font-size: 12px;
 }
 
 .header-nav li:nth-child(3) {
-    width: 289px;
+    width: 275px;
+    position: relative;
 }
 
 .header-nav li:nth-child(4) {
