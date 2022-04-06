@@ -206,6 +206,26 @@ body {
     width: 276px;
 }
 
+li:nth-child(3) input[type="text"] {
+    padding-left: 3.5px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat';
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+    color: white;
+    background-image: url(../img/cart-back.png);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 2px;
+    background-size: 15px 15px;
+    font-size: 12px;
+}
+
 .promo-title {
     margin-top: 150px;
     margin-bottom: 0px;
