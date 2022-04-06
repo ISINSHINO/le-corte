@@ -59,6 +59,7 @@ body {
 }
 
 .header-nav {
+    display: flex;
     width: 100%;
     padding-left: 0;
     list-style: none;
@@ -421,10 +422,11 @@ li:nth-child(3) input[type="text"] {
 }
 
 .footer-nav {
+    flex-wrap: nowrap;
     padding-top: 50px;
     list-style: none;
-    width: 1111px;
-    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
     padding-left: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -438,7 +440,8 @@ li:nth-child(3) input[type="text"] {
 }
 
 .footer-nav li a {
-    font-weight: 400;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .footer-nav li:first-child {
@@ -465,10 +468,11 @@ li:nth-child(3) input[type="text"] {
 }
 
 .footer-social {
+    display: flex;
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    margin-top: 12px;
+    margin-top: 0;
 }
 
 .footer-social li {

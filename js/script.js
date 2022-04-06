@@ -164,29 +164,38 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             itemsSection.innerHTML += ` 
             <div class="item">
-                <div class="picture">
-                    <img src="../img/${item.tag}.png">
-                    
+            <div class="picture">
+                <img src="/img/${item.tag}small.png">
+            </div>
+            <div class="name">
+                <p class="before-name gray">Артикул:</p>
+                <h5>${item.name}</h5>
+                <p class="tag">сухое</p>
+                <p class="tag">Франция</p>
+                <p class="tag">белое</p>
+                <div class="remove">
+                    <img src="../img/trashcan.png">
+                    <span class="tooltiptext">Удалить из <br>корзины</span>
                 </div>
-                <div class="name">
-                    <h5>${item.name}</h5>
-                    <div class="remove">
-                        <img src="../img/trashcan.png">
-                        <span class="tooltiptext">Удалить из <br>корзины</span>
-                    </div> 
-                </div>
-                <div class="price">
+            </div>
+            <div class="amount">
+                <p class="before-amount gray">Количество:</p>
+                <button class="quantity-decrease">-</button>
+                <span class="amount-number">${item.inCart}</span>
+                <button class="quantity-increase">+</button>
+            </div>
+            <div class="total">
+                <p class="before-price gray">Стоимость:</p>
+                <div class="one-price">
+                    <p>Цена за 1 шт.</p>
                     <p>${item.price}&nbsp;р.</p>
                 </div>
-                 <div class="amount">
-                    <button class="quantity-decrease">-</button>
-                        <span class="amount-number">${item.inCart}</span>
-                    <button class="quantity-increase">+</button>
-                </div>
-                <div class="total">
+                <div class="total-price">
+                    <p>Итого</p>
                     <p>${item.price * item.inCart}&nbsp;р.</p>
-                </div> 
+                </div>
             </div>
+        </div>
             `;
         });
 
@@ -214,14 +223,6 @@ function displayCart() {
             </div>
         `
 
-        // document.querySelector(".amount-total-number").innerText = totalyItem + ' шт.';
-        // document.querySelector(".before-total-number").innerText = totaly + ' р.';
-        // let sale = Math.round(totaly * 0.2);
-        // sale = sale.toString(10);
-        // document.querySelector(".after-total-number").innerText = '- ' + sale + ' р.';
-        // document.querySelector(".after-overall-number").innerText = totaly - Math.round(totaly * 0.2) + ' р.';
-
-
         deleteButtons();
         manageQuantity();
     }
@@ -241,7 +242,7 @@ function manageQuantity() {
             currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
             console.log(currentQuantity);
 
-            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('h5').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.querySelector('h5').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
 
             console.log(currentProduct);
 
@@ -257,13 +258,14 @@ function manageQuantity() {
         increaseButtons[i].addEventListener('click', () => {
             console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
-            console.log(currentQuantity);
-            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('h5').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
+            console.log(increaseButtons[i].parentElement.previousElementSibling.querySelector('h5'));
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.querySelector('h5').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
             console.log(currentProduct);
 
             cartItems[currentProduct].inCart += 1;
             cartNumbers(cartItems[currentProduct]);
             totalCost(cartItems[currentProduct]);
+
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
             displayCart();
         });
@@ -282,7 +284,7 @@ function deleteButtons() {
 
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
-            productName = deleteButtons[i].previousElementSibling.textContent.toLocaleLowerCase().replace(/ /g, '').trim();
+            productName = deleteButtons[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent.toLocaleLowerCase().replace(/ /g, '').trim();
 
             localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart);
 

@@ -59,6 +59,7 @@ body {
 
 .header-nav {
     width: 100%;
+    display: flex;
     padding-left: 0;
     list-style: none;
     font-size: 13px;
@@ -273,11 +274,11 @@ body {
 }
 
 .footer-nav {
+    display: flex;
     margin-top: 0px;
     padding-top: 50px;
     list-style: none;
     width: 100%;
-    padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
 }
@@ -313,10 +314,12 @@ body {
 }
 
 .footer-social {
+    display: flex;
+    flex-wrap: nowrap;
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    margin-top: 12px;
+    margin-top: 0;
 }
 
 .footer-social li {

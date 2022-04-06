@@ -150,7 +150,8 @@ body {
 }
 
 .header-nav {
-    width: 1120px;
+    display: flex;
+    width: 100%;
     padding-left: 0;
     list-style: none;
     font-size: 13px;
@@ -173,7 +174,6 @@ body {
 }
 
 .header-nav li {
-    float: left;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     padding-left: 0px;
@@ -771,17 +771,16 @@ li:nth-child(3) input[type="text"] {
 }
 
 .footer-nav {
+    display: flex;
+    width: 100%;
     padding-top: 50px;
     list-style: none;
-    width: 100%;
-    padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
 }
 
 .footer-nav li {
     padding: 15px 32px;
-    float: left;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
@@ -810,10 +809,12 @@ li:nth-child(3) input[type="text"] {
 }
 
 .footer-social {
+    display: flex;
+    flex-wrap: nowrap;
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    margin-top: 12px;
+    margin-top: 0px;
     width: 100%;
 }
 
