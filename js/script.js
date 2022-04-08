@@ -6,6 +6,22 @@ function myFunction() {
     setTimeout(() => { popup.classList.toggle("show") }, 5000);
     return false;
 }
+
+function popUpToggle() {
+    console.log("great");
+    var popup = document.getElementById("popupPromocode");
+    popup.textContent = "Промокод успешно применен";
+    popup.classList.toggle("show");;
+    setTimeout(() => { popup.classList.toggle("show") }, 3000);
+}
+
+function popUpToggleError() {
+    console.log("bad");
+    var popup = document.getElementById("popupPromocode");
+    popup.textContent = "Введен неверный промокод";
+    popup.classList.toggle("show");;
+    setTimeout(() => { popup.classList.toggle("show") }, 3000);
+}
 /*********************************************************************** */
 
 /**Убрать blur и popup с проверкой возраста при клике */
@@ -51,13 +67,57 @@ let products = [{
     }]
     /************************************ */
 
+
 /** Всем кнопкам добавляем слушателя с инкрементом по клику*/
 let addToCartButtons = document.querySelectorAll('.to-cart-btn');
+
 addToCartButtons.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        cartNumbers(products[index]);
-        totalCost(products[index]);
-    });
+
+    switch (addToCartButtons[index].classList[1]) {
+        case 'napa-valley':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[0]);
+                totalCost(products[0]);
+            });
+            break;
+        case 'red-car':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[1]);
+                totalCost(products[1]);
+            });
+            break;
+        case 'cabernet-franc':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[2]);
+                totalCost(products[2]);
+            });
+            break;
+        case 'ramey-claret':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[3]);
+                totalCost(products[3]);
+            });
+            break;
+        case 'pinot-noir':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[4]);
+                totalCost(products[4]);
+            });
+            break;
+        case 'sauvignon-blanc':
+            addToCartButtons[index].addEventListener("click", () => {
+                cartNumbers(products[5]);
+                totalCost(products[5]);
+            });
+            break;
+        default:
+            btn.addEventListener("click", () => {
+                cartNumbers(products[index]);
+                totalCost(products[index]);
+            });
+
+    }
+
 });
 /**************************************************************/
 
@@ -77,6 +137,8 @@ function onLoadCartNumbers() {
 function cartNumbers(product, action) {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
+
+
 
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -125,10 +187,12 @@ function setItems(product) {
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 /**************************************************************/
+localStorage.setItem('saleAmount', '');
 
 function totalCost(product, action) {
     // console.log("The products price is", product.price);
     let cart = localStorage.getItem('totalCost');
+
 
 
     if (action) {
@@ -148,28 +212,38 @@ function displayCart() {
     cartItems = JSON.parse(cartItems);
     let orderSection = document.querySelector(".cart-right-part")
     let itemsSection = document.querySelector(".items");
-
+    // let saleAmount = localStorage.getItem('saleAmount');
     let totaly = localStorage.getItem('totalCost');
     totaly = parseInt(totaly);
 
     let totalyItem = localStorage.getItem('cartNumbers');
     totalyItem = parseInt(totalyItem);
 
-    let sale = Math.round(totaly * 0.2);
-    sale = sale.toString(10);
+    let sale = Math.round(totaly * localStorage.getItem('saleAmount'));
+    console.log(sale);
+    console.log(localStorage.getItem('saleAmount'));
+
+    // console.log(localStorage.getItem('saleAmount'));
+    // let sale = 0;
+    // if (localStorage.getItem('saleAmount') > 0) {
+    //     sale = Math.round(totaly - (totaly * localStorage.getItem('saleAmount')));
+    // }
+    // console.log(sale);
+    // sale = (sale).toString(10);
 
     if (cartItems && itemsSection && orderSection) {
+
         itemsSection.innerHTML = '';
         orderSection.innerHTML = '';
         Object.values(cartItems).map(item => {
             itemsSection.innerHTML += ` 
-            <div class="item">
+        <div class="item">
             <div class="picture">
-                <img src="img/${item.tag}small.png">
+                <a href="wine-card-${item.tag}.html"><img src="img/${item.tag}small.png"></a>
             </div>
             <div class="name">
                 <p class="before-name gray">Артикул:</p>
-                <h5>${item.name}</h5>
+                <h5><a class="title-link" href="wine-card-${item.tag}.html">${item.name}</a></h5>
                 <p class="tag">сухое</p>
                 <p class="tag">Франция</p>
                 <p class="tag">белое</p>
@@ -220,11 +294,17 @@ function displayCart() {
                 </div>
                 <button class="order-button ">Оформить заказ</button>
                 <button onclick="location.href='collection.html'" class="back-button ">Вернуться к покупкам</button>
-            </div>
+                <h4 class="promocode-title">Есть промокод?</h4>
+                <p class="promocode-article">Введите промокод для получения<br>скидки</p>
+                <span class="popuptext" id="popupPromocode">Промокод успешно применен!</span>
+                <input type="text" name="promocode" id="promocode" placeholder="Пример: GFBD2331">
+                <br>
+                <button class="use-promo-button">Применить</button>
         `
 
         deleteButtons();
         manageQuantity();
+        usePromo();
     }
 }
 
@@ -274,7 +354,6 @@ function manageQuantity() {
 
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.remove');
-    console.log(deleteButtons);
     let productNumbers = localStorage.getItem('cartNumbers');
     let cartCost = localStorage.getItem("totalCost");
     let cartItems = localStorage.getItem('productsInCart');
@@ -299,7 +378,37 @@ function deleteButtons() {
     }
 }
 
+promocodes = [
+    'sale10',
+    'sale20',
+    'sale99'
+];
 
+function usePromo() {
+    var promoInput = document.getElementById('promocode');
+    var usePromoBtn = document.querySelector('.use-promo-button');
+    let flag;
+    usePromoBtn.addEventListener('click', () => {
+        console.log('clicked');
+        for (i = 0; i < promocodes.length; i++) {
+            if (promoInput.value == promocodes[i]) {
+                console.log('checked');
+                localStorage.setItem('saleAmount', parseInt(promocodes[i].replace(/^\D+/g, "")) / 100);
+                console.log(localStorage.getItem('saleAmount'));
+                flag = true;
+
+                displayCart();
+                popUpToggle();
+            }
+
+        }
+        if (!flag) {
+            displayCart();
+            popUpToggleError();
+        }
+    })
+
+}
 
 onLoadCartNumbers();
 displayCart();

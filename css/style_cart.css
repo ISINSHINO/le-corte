@@ -171,10 +171,11 @@ li:nth-child(3) input[type="text"] {
 }
 
 .cart-right-part {
+    position: relative;
     margin-top: 110px;
     float: right;
     width: 400px;
-    height: 456px;
+    height: 680px;
     background-color: rgba(230, 227, 196, 0.7);
     border-radius: 5px;
 }
@@ -192,16 +193,17 @@ li:nth-child(3) input[type="text"] {
 }
 
 .item {
+    padding-left: 20px;
     position: relative;
 }
 
 .item:after {
     top: 140px;
-    right: -2%;
+    right: 1%;
     content: '';
     position: absolute;
     height: 1px;
-    width: 1010px;
+    width: 960px;
     background-image: url(../img/item-after.png);
 }
 
@@ -242,13 +244,26 @@ li:nth-child(3) input[type="text"] {
 }
 
 h5 {
-    margin-top: 5px;
+    margin-top: 0px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
-    color: #000000;
+    color: #282828;
     margin-bottom: 6px;
+}
+
+.title-link:link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #282828;
+    text-decoration: none;
+}
+
+.title-link:visited {
+    color: #282828;
 }
 
 .one-price,
@@ -376,7 +391,7 @@ h5 {
 }
 
 .total-title {
-    margin-top: 50px;
+    margin-top: 40px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -493,6 +508,146 @@ h5 {
     color: rgba(255, 255, 255, 0.3);
 }
 
+.promocode-title {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    /* or 33px */
+    color: #998431;
+    padding-left: 40px;
+    margin-bottom: 5px;
+}
+
+.promocode-article {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    color: #000000;
+    padding-left: 40px;
+    margin-top: 0;
+}
+
+.cart-right-part input[type="text"] {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    color: #B5AFAF;
+    padding-left: 15px;
+    border: 1px solid rgba(153, 132, 49, 0.4);
+    height: 50px;
+    width: 320px;
+    border-radius: 5px;
+    margin-left: 40px;
+    background-color: transparent;
+}
+
+.cart-right-part input[type="text"]:focus {
+    outline: 1px solid rgba(153, 132, 49, 1);
+    color: black;
+}
+
+::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+    color: #B5AFAF;
+    padding-left: 0px;
+}
+
+.use-promo-button {
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #998431;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.popuptext {
+    visibility: hidden;
+    width: 290px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 21%;
+    left: 50%;
+    margin-left: -135px;
+}
+
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.cart-right-part .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.use-promo-button:hover {
+    background-color: #6D5E14;
+}
+
+.use-promo-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .quantity-increase,
 .quantity-decrease {
     border: 1px solid #998431;
@@ -522,10 +677,10 @@ h5 {
 }
 
 .footer-nav {
+    display: flex;
     padding-top: 50px;
     list-style: none;
     width: 100%;
-    padding-bottom: 50px;
     padding-left: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -566,6 +721,7 @@ h5 {
 }
 
 .footer-social {
+    display: flex;
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;

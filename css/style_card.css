@@ -371,7 +371,9 @@ li:nth-child(3) input[type="text"] {
     text-decoration: none;
 }
 
-.item a:visited {
+.item a:visited,
+.item-link,
+.item-link:link {
     color: #000;
 }
 
