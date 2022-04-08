@@ -165,7 +165,7 @@ function displayCart() {
             itemsSection.innerHTML += ` 
             <div class="item">
             <div class="picture">
-                <img src="/img/${item.tag}small.png">
+                <img src="img/${item.tag}small.png">
             </div>
             <div class="name">
                 <p class="before-name gray">Артикул:</p>
@@ -174,7 +174,7 @@ function displayCart() {
                 <p class="tag">Франция</p>
                 <p class="tag">белое</p>
                 <div class="remove">
-                    <img src="../img/trashcan.png">
+                    <img src="img/trashcan.png">
                     <span class="tooltiptext">Удалить из <br>корзины</span>
                 </div>
             </div>
