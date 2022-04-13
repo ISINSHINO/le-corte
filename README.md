@@ -1,4 +1,4 @@
-# le-corte
+# le-corte [PROMO](https://isinshino.github.io/le-corte/)
 Study project for web-interface developing and web-interface design
 1. HTML
 2. CSS
